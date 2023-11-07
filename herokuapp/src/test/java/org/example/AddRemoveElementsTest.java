@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class addRemoveElementsTest extends BaseTest {
+public class AddRemoveElementsTest extends BaseTest {
 
-    public addRemoveElements addRemoveElementsPage = new addRemoveElements();
+    public AddRemoveElements addRemoveElementsPage = new AddRemoveElements();
 
     @Test
     public void checkPageName(){

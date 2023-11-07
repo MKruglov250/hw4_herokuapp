@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class addRemoveElements {
+public class AddRemoveElements {
 
     SelenideElement pageName = $("h3");
 
