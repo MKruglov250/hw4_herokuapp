@@ -13,7 +13,7 @@ public class BasicAuthTest extends BaseTest {
 
     @Test(priority=1)
     public void loginWithValidCredentialsShouldSucceed(){
-        open("/basic_auth", "", "admin", "admin");
+        open("basic_auth", "", "admin", "admin");
         Assert.assertEquals(basicAuthPage.getPageName(), "Basic Auth");
         Assert.assertEquals(basicAuthPage.getPageMessage(), "Congratulations! You must have the proper credentials.");
     }
