@@ -11,7 +11,7 @@ public class BasicAuthTest extends BaseTest {
 
     BasicAuth basicAuthPage = new BasicAuth();
 
-    @Test
+    @Test(priority=1)
     public void loginWithValidCredentialsShouldSucceed(){
         open("/basic_auth", "", "admin", "admin");
         Assert.assertEquals(basicAuthPage.getPageName(), "Basic Auth");
