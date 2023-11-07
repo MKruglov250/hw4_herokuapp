@@ -23,7 +23,8 @@ public class MainPageTest extends BaseTest {
         Assert.assertEquals(modulesCount, 44);
     }
 
-    @Test public void checkABTestingPageOpens (){
+    @Test(priority = 1)
+    public void checkABTestingPageOpens (){
         String expectedABTestingPageUrl = "http://the-internet.herokuapp.com/abtest";
         String realABTestingRageUrl = new MainPage().goToABTestingPage();
         Assert.assertEquals(expectedABTestingPageUrl, realABTestingRageUrl);
