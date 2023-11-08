@@ -9,7 +9,8 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class BaseTest {
-    @BeforeSuite
+    @BeforeSuite(description = "Initializing Herokuapp site and setting up Browser" +
+            "and WebDriver settings before suite start")
     public void before() {
 
         Configuration.baseUrl = "http://the-internet.herokuapp.com/";

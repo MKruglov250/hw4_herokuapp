@@ -14,19 +14,19 @@ public class CheckboxesTest extends BaseTest {
         open("checkboxes");
     }
 
-    @Test
+    @Test(description = "Checkbox 1 must be unchecked, Checkbox 2 must be checked")
     public void checkDefaultValues(){
         Assert.assertFalse(checkboxesPage.getCheckboxCheckedStatus(1));
         Assert.assertTrue(checkboxesPage.getCheckboxCheckedStatus(2));
     }
 
-    @Test
+    @Test(description = "Check clicking on first checkbox works")
     public void checkClickOnFirstCheckbox(){
         checkboxesPage.clicksOnFirstCheckbox();
         Assert.assertTrue(checkboxesPage.getCheckboxCheckedStatus(1));
     }
 
-    @Test (priority = 1)
+    @Test (priority = 1, description = "Check clicking on second checkbox works")
     public void checkClickOnSecondCheckbox(){
         checkboxesPage.clicksOnSecondCheckbox();
         Assert.assertFalse(checkboxesPage.getCheckboxCheckedStatus(2));

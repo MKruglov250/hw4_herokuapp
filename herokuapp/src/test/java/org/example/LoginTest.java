@@ -15,18 +15,21 @@ public class LoginTest extends BaseTest{
         open("login");
     }
 
-    @Test
+    @Test(description = "Trying to log in with invalid username")
     public void checkLoginWithBadUsername() {
-        Assert.assertTrue(login.loginWithIncorrectUsername().contains("Your username is invalid!"));
+        Assert.assertTrue(login.loginWithIncorrectUsername()
+                .contains("Your username is invalid!"));
     }
 
-    @Test
+    @Test(description = "Trying to log in with valid username and invalid password")
     public void checkLoginWithBadPassword() {
-        Assert.assertTrue(login.loginWithIncorrectPassword().contains("Your password is invalid!"));
+        Assert.assertTrue(login.loginWithIncorrectPassword()
+                .contains("Your password is invalid!"));
     }
 
-    @Test
+    @Test(description = "Trying to log in with valid credentials")
     public void checkLoginWithGoodCredentials() {
-        Assert.assertEquals(login.loginWithCorrectCredentials(),"Welcome to the Secure Area. When you are done click logout below.");
+        Assert.assertEquals(login.loginWithCorrectCredentials(),
+                "Welcome to the Secure Area. When you are done click logout below.");
     }
 }

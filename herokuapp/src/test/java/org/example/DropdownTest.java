@@ -14,17 +14,17 @@ public class DropdownTest extends BaseTest{
     public void openPage(){
         open("dropdown");
     }
-    @Test
+    @Test(description = "Default text in Dropdown must be as in expected message")
     public void checkDefaultOption(){
         Assert.assertEquals(dropdownList.checkDefaultValue(),"Please select an option");
     }
 
-    @Test
+    @Test(description = "Dropdown Option 1 must have text as expected below")
     public void checkOption1(){
         Assert.assertEquals(dropdownList.checkOption1(),"Option 1");
     }
 
-    @Test
+    @Test(description = "Dropdown Option 2 must have text as expected below")
     public void checkOption2(){
         Assert.assertEquals(dropdownList.checkOption2(),"Option 2");
     }

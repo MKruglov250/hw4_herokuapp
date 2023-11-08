@@ -15,17 +15,17 @@ public class AddRemoveElementsTest extends BaseTest {
         open("add_remove_elements/");
     }
 
-    @Test
+    @Test(description = "Checking that we opened Add/Remove elements page")
     public void checkPageName(){
         Assert.assertEquals(addRemoveElementsPage.getPageName(),"Add/Remove Elements");
     }
 
-    @Test
+    @Test(description = "Checking that AddElement button works")
     public void checkAddElementAddsDeleteButton() {
         Assert.assertTrue(addRemoveElementsPage.clickAddElementButton());
     }
 
-    @Test
+    @Test(description = "Checking that DeleteElement button works")
     public void checkDeleteButtonWorks() {
         Assert.assertFalse(addRemoveElementsPage.clickDeleteButton());
     }

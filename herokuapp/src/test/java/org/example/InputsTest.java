@@ -13,22 +13,22 @@ public class InputsTest extends BaseTest {
     public void openPage(){
         open("inputs");
     }
-    @Test
+    @Test(description = "Check that input field is empty after typing text keys")
     public void checkTextEntering(){
         Assert.assertTrue(inputsPage.setTextValue());
     }
 
-    @Test
+    @Test(description = "Checking that typing integers is possible")
     public void checkSetInteger(){
         Assert.assertEquals(inputsPage.setIntValue(),5);
     }
 
-    @Test
+    @Test(description = "Checking that ArrowUP control increases input value by 1")
     public void checkArrowUp(){
         Assert.assertEquals(inputsPage.arrowUpValue(),6);
     }
 
-    @Test
+    @Test(description = "Checking that ArrowDOWN control decreases input value by 1")
     public void checkArrowDown(){
         Assert.assertEquals(inputsPage.arrowDownValue(),4);
     }

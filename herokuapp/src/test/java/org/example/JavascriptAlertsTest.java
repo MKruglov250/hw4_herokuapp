@@ -15,28 +15,28 @@ public class JavascriptAlertsTest extends BaseTest{
         open("javascript_alerts");
     }
 
-    @Test
+    @Test(description = "Triggering Alert popup")
     public void testJsAlertPopup() {
         Assert.assertEquals(alertsPage.jsAlertButtonClick(),"You successfully clicked an alert");
     }
 
-    @Test
+    @Test(description = "Triggering Confirmation popup and pressing OK")
     public void testJsConfirmOK() {
         Assert.assertEquals(alertsPage.jsConfirmButtonOkClick(), "You clicked: Ok");
     }
 
-    @Test
+    @Test(description = "Triggering Confirmation popup and pressing Cancel")
     public void testJsConfirmCancel() {
         Assert.assertEquals(alertsPage.jsConfirmButtonCancelClick(), "You clicked: Cancel");
     }
 
-    @Test
+    @Test(description = "Triggering Prompt popup and entering Test123 text")
     public void testJsPromptEnterTextTest123() {
         Assert.assertEquals(alertsPage.jsPromptButtonTest123Click(), "You entered: Test123");
     }
 
-    @Test
-    public void testJsPromtCancel() {
+    @Test(description = "Triggering Prompt popup and pressing Cancel")
+    public void testJsPromptCancel() {
         Assert.assertEquals(alertsPage.jsPromptButtonCancelClick(), "You entered: null");
     }
 

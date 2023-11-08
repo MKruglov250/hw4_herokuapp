@@ -15,13 +15,13 @@ public class TyposTest extends BaseTest{
         open("typos");
     }
 
-    @Test
+    @Test(description = "Check that Typos page is open")
     public void checkPageOpens(){
         Assert.assertEquals(typosPage.checkPageOpens(),"Typos");
     }
 
     // Check for typos (almost) always fails - typo is likely to be found
-    @Test
+    @Test(description = "Refreshing page and checking there is no Typo in message text")
     public void checkMessageForTypos(){
         Assert.assertFalse(typosPage.checkNoTypo());
     }

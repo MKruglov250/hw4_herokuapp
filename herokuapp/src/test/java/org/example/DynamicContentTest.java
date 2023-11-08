@@ -26,7 +26,7 @@ public class DynamicContentTest extends BaseTest{
         open("dynamic_content");
     }
 
-    @Test
+    @Test(description = "Check that Mandalorian image can appear on this page")
     public void testMandalorianImage() {
         while(mandalorianTest < 10 && !mandalorianBool){
             if (!dynamic.checkMandalorian()){
@@ -39,7 +39,7 @@ public class DynamicContentTest extends BaseTest{
         Assert.assertTrue(mandalorianBool);
     }
 
-    @Test
+    @Test(description = "Check that Mario image can appear on this page")
     public void testMarioImage() {
         while(marioTest < 10 && !marioBool){
             if (!dynamic.checkMario()){
@@ -52,7 +52,7 @@ public class DynamicContentTest extends BaseTest{
         Assert.assertTrue(marioBool);
     }
 
-    @Test
+    @Test(description = "Check that Stormtrooper image can appear on this page")
     public void testStormtrooperImage() {
         while(stormtrooperTest < 10 && !stormtrooperBool){
             if (!dynamic.checkStormtrooper()){
@@ -65,7 +65,7 @@ public class DynamicContentTest extends BaseTest{
         Assert.assertTrue(stormtrooperBool);
     }
 
-    @Test
+    @Test(description = "Check that Punisher image can appear on this page")
     public void testPunisherImage() {
         while(punisherTest < 10 && !punisherBool){
             if (!dynamic.checkPunisher()){
@@ -78,7 +78,7 @@ public class DynamicContentTest extends BaseTest{
         Assert.assertTrue(punisherBool);
     }
 
-    @Test
+    @Test(description = "Check that Wolverine image can appear on this page")
     public void testWolverineImage() {
         while(wolverineTest < 10 && !wolverineBool){
             if (!dynamic.checkWolverine()){
