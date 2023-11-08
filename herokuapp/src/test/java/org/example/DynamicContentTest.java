@@ -2,6 +2,7 @@ package org.example;
 
 import com.codeborne.selenide.Selenide;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -20,9 +21,13 @@ public class DynamicContentTest extends BaseTest{
     int punisherTest = 0;
     Boolean punisherBool = false;
 
+    @BeforeMethod
+    public void openPage(){
+        open("dynamic_content");
+    }
+
     @Test
     public void testMandalorianImage() throws InterruptedException {
-        open("dynamic_content");
         while(mandalorianTest < 10 && !mandalorianBool){
             if (!dynamic.checkMandalorian()){
                 Selenide.refresh();
@@ -38,7 +43,6 @@ public class DynamicContentTest extends BaseTest{
 
     @Test
     public void testMarioImage() throws InterruptedException {
-        open("dynamic_content");
         while(marioTest < 10 && !marioBool){
             if (!dynamic.checkMario()){
                 Selenide.refresh();
@@ -54,7 +58,6 @@ public class DynamicContentTest extends BaseTest{
 
     @Test
     public void testStormtrooperImage() throws InterruptedException {
-        open("dynamic_content");
         while(stormtrooperTest < 10 && !stormtrooperBool){
             if (!dynamic.checkStormtrooper()){
                 Selenide.refresh();
@@ -70,7 +73,6 @@ public class DynamicContentTest extends BaseTest{
 
     @Test
     public void testPunisherImage() throws InterruptedException {
-        open("dynamic_content");
         while(punisherTest < 10 && !punisherBool){
             if (!dynamic.checkPunisher()){
                 Selenide.refresh();
@@ -86,7 +88,6 @@ public class DynamicContentTest extends BaseTest{
 
     @Test
     public void testWolverineImage() throws InterruptedException {
-        open("dynamic_content");
         while(wolverineTest < 10 && !wolverineBool){
             if (!dynamic.checkWolverine()){
                 Selenide.refresh();
@@ -99,5 +100,4 @@ public class DynamicContentTest extends BaseTest{
         }
         Assert.assertTrue(wolverineBool);
     }
-
 }
