@@ -18,14 +18,14 @@ public class AddRemoveElementsTest extends BaseTest {
     @Test
     public void checkAddElementAddsDeleteButton() throws InterruptedException {
         open("add_remove_elements/");
-        Assert.assertNotNull(addRemoveElementsPage.clickAddElementButton());
+        Assert.assertTrue(addRemoveElementsPage.clickAddElementButton());
     }
 
-    // Test is broken because page is reloaded after AddElement test for some reason...
-//    @Test(priority=1)
-//    public void checkSecondTimeAddElementAddsDeleteButton() throws InterruptedException {
-//        Assert.assertFalse(addRemoveElementsPage.clickDeleteButton());
-//    }
+    @Test
+    public void checkDeleteButtonWorks() throws InterruptedException{
+        open("add_remove_elements/");
+        Assert.assertFalse(addRemoveElementsPage.clickDeleteButton());
+    }
 
 
 

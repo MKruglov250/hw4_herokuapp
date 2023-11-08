@@ -10,21 +10,24 @@ public class AddRemoveElements {
 
     SelenideElement addButton = $("button[onclick='addElement()']");
 
-    public static SelenideElement deleteButton;
+   SelenideElement deleteButton;
 
     public String getPageName(){
         return pageName.getText();
     }
 
-    public SelenideElement clickAddElementButton() throws InterruptedException {
+    public boolean clickAddElementButton() throws InterruptedException {
         Thread.sleep(600);
         addButton.click();
-        deleteButton = $("button[onclick='deleteElement']");
-        return deleteButton;
+        addButton.click();
+        deleteButton = $("button[onclick='deleteElement()']");
+        return deleteButton.isDisplayed();
     }
 
     public boolean clickDeleteButton() throws InterruptedException {
         Thread.sleep(600);
+        addButton.click();
+        deleteButton = $("button[onclick='deleteElement()']");
         deleteButton.click();
         return deleteButton.isDisplayed();
     }
