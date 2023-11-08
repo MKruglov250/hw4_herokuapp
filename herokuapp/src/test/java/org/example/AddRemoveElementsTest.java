@@ -21,12 +21,12 @@ public class AddRemoveElementsTest extends BaseTest {
     }
 
     @Test
-    public void checkAddElementAddsDeleteButton() throws InterruptedException {
+    public void checkAddElementAddsDeleteButton() {
         Assert.assertTrue(addRemoveElementsPage.clickAddElementButton());
     }
 
     @Test
-    public void checkDeleteButtonWorks() throws InterruptedException{
+    public void checkDeleteButtonWorks() {
         Assert.assertFalse(addRemoveElementsPage.clickDeleteButton());
     }
 

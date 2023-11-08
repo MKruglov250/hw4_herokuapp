@@ -16,17 +16,17 @@ public class LoginTest extends BaseTest{
     }
 
     @Test
-    public void checkLoginWithBadUsername() throws InterruptedException {
+    public void checkLoginWithBadUsername() {
         Assert.assertTrue(login.loginWithIncorrectUsername().contains("Your username is invalid!"));
     }
 
     @Test
-    public void checkLoginWithBadPassword() throws InterruptedException {
+    public void checkLoginWithBadPassword() {
         Assert.assertTrue(login.loginWithIncorrectPassword().contains("Your password is invalid!"));
     }
 
     @Test
-    public void checkLoginWithGoodCredentials() throws InterruptedException {
+    public void checkLoginWithGoodCredentials() {
         Assert.assertEquals(login.loginWithCorrectCredentials(),"Welcome to the Secure Area. When you are done click logout below.");
     }
 }

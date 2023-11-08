@@ -19,43 +19,38 @@ public class JavascriptAlerts {
 
     SelenideElement resultMessage = $(By.id("result"));
 
-    public String jsAlertButtonClick() throws InterruptedException {
+    public String jsAlertButtonClick(){
         jsAlertButton.click();
-        Thread.sleep(300);
         Alert alert = switchTo().alert();
         alert.accept();
         return resultMessage.getText();
     }
 
-    public String jsConfirmButtonOkClick() throws InterruptedException {
+    public String jsConfirmButtonOkClick() {
         jsConfirmButton.click();
-        Thread.sleep(300);
         Alert alert = switchTo().alert();
         alert.accept();
         return resultMessage.getText();
     }
 
 
-    public String jsConfirmButtonCancelClick() throws InterruptedException {
+    public String jsConfirmButtonCancelClick() {
         jsConfirmButton.click();
-        Thread.sleep(300);
         Alert alert = switchTo().alert();
         alert.dismiss();
         return resultMessage.getText();
     }
 
-    public String jsPromptButtonTest123Click() throws InterruptedException {
+    public String jsPromptButtonTest123Click() {
         jsPromptButton.click();
-        Thread.sleep(300);
         Alert alert = switchTo().alert();
         alert.sendKeys("Test123");
         alert.accept();
         return resultMessage.getText();
     }
 
-    public String jsPromptButtonCancelClick() throws InterruptedException {
+    public String jsPromptButtonCancelClick() {
         jsPromptButton.click();
-        Thread.sleep(300);
         Alert alert = switchTo().alert();
         alert.dismiss();
         return resultMessage.getText();

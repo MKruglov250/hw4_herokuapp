@@ -32,17 +32,17 @@ public class HoversTest extends BaseTest {
 
     // Tests on checking Not Found are failing intentionally for now
     @Test
-    public void checkPageProfileOneExists() throws InterruptedException {
+    public void checkPageProfileOneExists() {
         Assert.assertNotEquals(hoverPage.pageProfileOne(),"Not Found");
     }
 
     @Test
-    public void checkPageProfileTwoExists() throws InterruptedException {
+    public void checkPageProfileTwoExists() {
         Assert.assertNotEquals(hoverPage.pageProfileTwo(),"Not Found");
     }
 
     @Test
-    public void checkPageProfileThreeExists() throws InterruptedException {
+    public void checkPageProfileThreeExists() {
         Assert.assertNotEquals(hoverPage.pageProfileThree(),"Not Found");
     }
 

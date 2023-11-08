@@ -27,75 +27,65 @@ public class DynamicContentTest extends BaseTest{
     }
 
     @Test
-    public void testMandalorianImage() throws InterruptedException {
+    public void testMandalorianImage() {
         while(mandalorianTest < 10 && !mandalorianBool){
             if (!dynamic.checkMandalorian()){
                 Selenide.refresh();
-                Thread.sleep(300);
                 mandalorianTest++;
             } else {
                 mandalorianBool = true;
-                Thread.sleep(300);
             }
         }
         Assert.assertTrue(mandalorianBool);
     }
 
     @Test
-    public void testMarioImage() throws InterruptedException {
+    public void testMarioImage() {
         while(marioTest < 10 && !marioBool){
             if (!dynamic.checkMario()){
                 Selenide.refresh();
-                Thread.sleep(300);
                 marioTest++;
             } else {
                 marioBool = true;
-                Thread.sleep(300);
             }
         }
         Assert.assertTrue(marioBool);
     }
 
     @Test
-    public void testStormtrooperImage() throws InterruptedException {
+    public void testStormtrooperImage() {
         while(stormtrooperTest < 10 && !stormtrooperBool){
             if (!dynamic.checkStormtrooper()){
                 Selenide.refresh();
-                Thread.sleep(300);
                 stormtrooperTest++;
             } else {
                 stormtrooperBool = true;
-                Thread.sleep(300);
             }
         }
         Assert.assertTrue(stormtrooperBool);
     }
 
     @Test
-    public void testPunisherImage() throws InterruptedException {
+    public void testPunisherImage() {
         while(punisherTest < 10 && !punisherBool){
             if (!dynamic.checkPunisher()){
                 Selenide.refresh();
-                Thread.sleep(300);
                 punisherTest++;
             } else {
                 punisherBool = true;
-                Thread.sleep(300);
             }
         }
         Assert.assertTrue(punisherBool);
     }
 
     @Test
-    public void testWolverineImage() throws InterruptedException {
+    public void testWolverineImage() {
         while(wolverineTest < 10 && !wolverineBool){
             if (!dynamic.checkWolverine()){
                 Selenide.refresh();
-                Thread.sleep(300);
                 wolverineTest++;
             } else {
                 wolverineBool = true;
-                Thread.sleep(300);
             }
         }
         Assert.assertTrue(wolverineBool);

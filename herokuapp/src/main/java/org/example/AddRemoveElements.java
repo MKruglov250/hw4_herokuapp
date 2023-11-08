@@ -16,16 +16,14 @@ public class AddRemoveElements {
         return pageName.getText();
     }
 
-    public boolean clickAddElementButton() throws InterruptedException {
-        Thread.sleep(600);
+    public boolean clickAddElementButton() {
         addButton.click();
         addButton.click();
         deleteButton = $("button[onclick='deleteElement()']");
         return deleteButton.isDisplayed();
     }
 
-    public boolean clickDeleteButton() throws InterruptedException {
-        Thread.sleep(600);
+    public boolean clickDeleteButton() {
         addButton.click();
         deleteButton = $("button[onclick='deleteElement()']");
         deleteButton.click();

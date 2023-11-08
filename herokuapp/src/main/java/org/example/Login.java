@@ -12,27 +12,24 @@ public class Login {
 
     SelenideElement loginButton = $("button[class='radius'][type='submit']");
 
-    public String loginWithIncorrectUsername() throws InterruptedException {
+    public String loginWithIncorrectUsername(){
         usernameField.setValue("123");
         passwordField.setValue("321");
         loginButton.click();
-        Thread.sleep(600);
         return $("div[class='flash error']").getText();
     }
 
-    public String loginWithIncorrectPassword() throws InterruptedException {
+    public String loginWithIncorrectPassword(){
         usernameField.setValue("tomsmith");
         passwordField.setValue("321");
         loginButton.click();
-        Thread.sleep(600);
         return $("div[class='flash error']").getText();
     }
 
-    public String loginWithCorrectCredentials() throws InterruptedException {
+    public String loginWithCorrectCredentials() {
         usernameField.setValue("tomsmith");
         passwordField.setValue("SuperSecretPassword!");
         loginButton.click();
-        Thread.sleep(600);
         return $("h4[class='subheader']").getText();
     }
 }

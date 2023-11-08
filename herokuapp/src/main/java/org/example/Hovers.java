@@ -30,24 +30,21 @@ public class Hovers {
         return hover3.find("div[class='figcaption']").find("h5").getText();
     }
 
-    public String pageProfileOne() throws InterruptedException {
+    public String pageProfileOne() {
         actions().moveToElement(hover1).build().perform();
         hover1.find("div[class='figcaption']").find("a").click();
-        Thread.sleep(300);
         return $("h1").getText();
     }
 
-    public String pageProfileTwo() throws InterruptedException {
+    public String pageProfileTwo() {
         actions().moveToElement(hover2).build().perform();
         hover2.find("div[class='figcaption']").find("a").click();
-        Thread.sleep(300);
         return $("h1").getText();
     }
 
-    public String pageProfileThree() throws InterruptedException {
+    public String pageProfileThree() {
         actions().moveToElement(hover3).build().perform();
         hover3.find("div[class='figcaption']").find("a").click();
-        Thread.sleep(300);
         return $("h1").getText();
     }
 }
